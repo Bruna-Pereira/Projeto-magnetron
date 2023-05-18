@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tela-cadastro.css">
+    <title> Cadastro de usuário </title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="text-left">
+            <h1> Realize o seu cadastro<br>E faça o login no jogo!</h1>
+            <!-- <img src="login-animate.svg" alt="login-animação" class="img-login"> -->
+            <img src="./pit-stop-logo.png" class="img-login">
+        </div>
+
+        <div class="text-right">
+            <div class="card">
+                <h1> Criação de Usuários</h1>
+                <img src="./logo-magnetron-padrao.png" class="logo-magnetron">
+
+                <div id='msgError'></div>
+                <div id='msgSuccess'></div>
+
+                <div class="label-float">
+                    <label for="labelName" id="labelName">Nome</label>
+                    <input type="text" id="inputName" placeholder="Nome" required>    
+                </div>
+
+                <div class="label-float">
+                    <label for="user" id="labelUser">Usuário</label>
+                    <input type="text" id="inputUser" placeholder="Usuário" required>    
+                </div>
+
+                <div class="label-float">
+                    <label for="password" id="labelPassword">Senha</label>
+                    <input type="password" id="inputPassword" placeholder="Senha"required>
+                </div>
+
+                <div class="label-float">
+                    <label for="passwordConfirm" id="labelConfirmPassword">Confirmar senha</label>
+                    <input type="password" id="inputConfirmPassword" placeholder="Confirmar senha"required>
+                </div>
+                <button onclick="registerUser()" class="button-login">Criar usuário</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tela-cadastro.js"></script>
+
+</body>
+</html>

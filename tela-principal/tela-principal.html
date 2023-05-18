@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tela-principal.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Tela Principal</title>
+</head>
+<body>
+    <!-- Menu Lateral -->
+    <aside>
+        <!-- Icone que abre o menu das opções  -->
+        <div class="button-open-options">
+            <i class="material-icons" id="button-options" onclick="openOptions()" style="font-size:45px;color:rgb(255, 255, 255)">menu</i>
+        </div>
+
+          <!-- Menu de opções que serão mostradas ao clicar no botao button-options -->
+          <div class="container-open" id="container-open">
+            <!-- Icone que ao ser clicado vai fechar o menu de opções, voltando ao seu estado normal -->
+            <i class="material-icons" id="button-close" style="font-size:45px" onclick="openOptions()">arrow_back</i>
+            <!-- Contém todas as opções -->
+            <div class="botoes">
+                <!-- Botão que mostrará todo o conteúdo do service-order -->
+                <button id="button-service-order" onclick="openServiceOrder()"> Ordens de Serviço </button>
+                <hr>
+                
+                <!-- Conteúdo a ser mostrado referente ao service-order-->
+                <div id="service-order">
+                    <!-- Botão que retorna para o menu de opções principal -->
+                    <i class="material-icons" id="back-menu-options" style="font-size:45px" onclick="openServiceOrder()">arrow_back</i> 
+                    <h2> Ordem de Serviço </h2>
+                    <h4> Descrição do problema </h4>
+                    <div class="problem-description">
+                        <p> Bem vindo ao pitstop magnetron <br>
+                            aqui vc pode praticar e aprender
+                            sobre manuntenção de motos<br>   
+                        </p>
+                    </div>
+                        <h4> Diagnóstico do mecanico </h4>
+                        <div class="mechanic-diagnosis"></div>
+                        <h4>Lista de Verificação </h4>
+                        <div class="check-list">
+                            <div class="checks-lists">
+                                <form>
+                                    Vela de ignição: <input type="checkbox" id="combustion-candle" name="combustion-candle" value="combustion-candle"><br>
+                                    Bobina: <input type="checkbox" id="coil" name="coil" value="checked"><br>
+                                    Botão partida elétrica: <input type="checkbox" id="electric-start-button" name="electric-start-button" value="electric-start-button">
+                                    <input type="submit" id="button-check-box" value="Enviar">
+                                </form>
+                            </div>
+                        </div>
+                        
+                </div>
+                <button id="button-stock"> Estoque </button>
+                <hr>
+                <button id="button-magnetron"> Magnetron </button>
+                <hr>
+                <button id="button-ranking"> Ranking </button>
+            </div> 
+            </div>
+              
+        </div>      
+    </aside>
+    <main>
+        <div class="container">
+            <img class="icon-mag" src="../Imagens-jogo/logo-magnetron-cortado.png" alt="logo-magnentron">
+        </div>
+        <div class="zoom-range">
+            <input type=range id="zoomRange" value=0 max=3 min=1>
+        </div>
+        <div class="zoom" id="zoom">
+            <img class="icon-positive" id="icon-positive" src="../Imagens-jogo/Icones/zoom+.png" alt="zoom-positive">
+            <img class="icon-negative" id="icon-negative" src="../Imagens-jogo/Icones/zoom-.png" alt="zoom-negative" >    
+        </div>
+       
+        <div class="container-moto">  
+            <img class="moto-example" ondrop="drop(event)" ondragover="allowDrop(event)" id="moto-example" src="../Imagens-jogo/moto-azul.png" width=320px>
+            <!-- <img class="parte-da-moto" src="../Imagens-jogo/parte-da-moto.jpeg"> -->
+        </div>
+    </main>
+    
+    <footer>  
+        <img class="icon-footer" src="../Imagens-jogo/Icones/ferramenta-pecas.png" onclick="openOptionsFooter()"> 
+    </div> 
+        <div class="pecas" id="pecas">
+            <div class="bobina" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="../Imagens-jogo/imgs peças da mtoo/bobinaTamReduzido.png" id="bobina" draggable="true" ondragstart="drag(event)" >
+                <!-- <div class="peca3"></div>
+                <div class="peca4"></div>
+                <div class="peca5"></div> -->
+            </div>
+            <div class="vela" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="../Imagens-jogo/imgs peças da mtoo/velaiginicao.png" id="vela">
+            </div>
+
+            <div class="partida" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="../Imagens-jogo/imgs peças da mtoo/partida.png" id="electric-start">
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="tela-principal.js"></script>
+</body>
+</html>

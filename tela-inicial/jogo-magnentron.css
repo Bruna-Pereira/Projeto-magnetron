@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  button {
+    width: 200px;
+  }
+  
+  .menu {
+    min-width: 200px;
+  }
+
+  .img-login{
+    min-width: 50vw
+} 
+}
+  
+/* Estilo do botão em telas maiores */
+@media (min-width: 769px) {
+  button {
+    width: 200px;
+  }
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background: #484644;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+}
+
+.img-login {
+  width: 20vw;
+}
+
+button {
+    width: 220px;
+    min-width: 100px;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background: #ff6900;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #ff880052;
+}
+
+
+
+  
+  
